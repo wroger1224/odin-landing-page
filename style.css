@@ -30,6 +30,7 @@ header {
     font-size: 24px;
     color:#F9FAF8;
     font-weight: 900;
+    flex-shrink: 0;
 }
 
 a, 
@@ -42,18 +43,23 @@ a,
 ul {
     list-style: none;
     display: flex;
+    gap: 16px;
+    flex-shrink: 0;
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-grow: 0;
+    gap: 310px;
 }
 
 .hero-main {
     display: flex;
     gap: 50px;
     align-items: center;
+    justify-content: center;
     padding-top: 100px;
 }
 
@@ -67,16 +73,20 @@ ul {
     min-width: 400px;
     height: 200px;
     color:#F9FAF8;
+    line-height: 200px;
     text-align: center;
 }
 
 
 .hero-main button {
     margin-top: 10px;
-    color:#E5E7EB;
-    border-radius: 10%;
     border-color: #3882F6;
     border-style: none;
+}
+
+button {
+    color:#E5E7EB;
+    border-radius: 5px;
     padding: 5px 20px;
 }
 
@@ -85,14 +95,62 @@ button,
     background-color: #3882F6;
 }
 
+/*end of header/hero, begining of info block*/
+
+#info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+
 h2 {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
 }
 
+#info .content{
+    display: flex;
+    align-items: center;
+    gap: 50px
+}
+
+.block img{
+    border-color: #3882F6;
+    border-width: medium;
+    border-style: solid;
+    border-radius: 10%;
+    width: 150px;
+    height: 150px;
+}
+
+.block p{
+    width:150px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/*end info block, begin quote block*/
+
 #three {
     background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    padding: 100px 200px;
+    justify-content: center;
+}
+
+#three .content{
+    display: flex;
+    flex-direction: column;
+}
+
+#author {
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 0;
+    font-size: 25px;
 }
 
 #quote {
@@ -100,4 +158,48 @@ h2 {
     font-style: italic;
     font-weight: lighter;
     color: #1F2937;
+    width: 825px;
+    margin: 0;
+}
+
+/*end quote block, begin CTA block*/
+
+#four{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #E5E7EB;
+    margin: 50px 150px;
+    padding: 40px 0;
+    border-radius: 5px;
+}
+
+#four button {
+    border-color: #E5E7EB;
+    border-style: solid;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.cta, 
+#four button{
+    font-weight: 900;
+}
+
+.textbox p{
+    padding: 0;
+    margin: 0;
+}
+
+/*end CTA block, start footer*/
+
+footer{
+    color: #E5E7EB;
+    text-align: center;
+    line-height: 45px;
+    height: 75px;
+    font-size: 15px;
 }
